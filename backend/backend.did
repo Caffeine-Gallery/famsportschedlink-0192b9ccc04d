@@ -1,0 +1,15 @@
+type Time = int;
+type Event = 
+ record {
+   date: Time;
+   description: text;
+   eventType: text;
+   id: nat;
+   title: text;
+ };
+service : {
+  addEvent: (Time, text, text, text) -> (nat);
+  getAllEvents: () -> (vec Event) query;
+  getEventsByType: (text) -> (vec Event) query;
+  removeEvent: (nat) -> (bool);
+}
