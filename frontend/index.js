@@ -45,9 +45,9 @@ function renderEventList(filteredEvents = events) {
         eventElement.innerHTML = `
             <h3>${event.title}</h3>
             <p>Date: ${new Date(Number(event.date) / 1000000).toLocaleDateString()}</p>
-            <p>Type: ${event.eventType}</p>
+            <p>Type: ${event.eventType === 'sports' ? 'Adventure' : 'Learning'}</p>
             <p>${event.description}</p>
-            <button onclick="removeEvent(${event.id})">Remove</button>
+            <button onclick="removeEvent(${event.id})">Mine Event</button>
         `;
         eventList.appendChild(eventElement);
     });
@@ -74,12 +74,12 @@ document.getElementById('eventForm').addEventListener('submit', addEvent);
 
 document.getElementById('filterAll').addEventListener('click', () => renderEventList());
 document.getElementById('filterSports').addEventListener('click', () => {
-    const sportsEvents = events.filter(event => event.eventType === 'sports');
-    renderEventList(sportsEvents);
+    const adventureEvents = events.filter(event => event.eventType === 'sports');
+    renderEventList(adventureEvents);
 });
 document.getElementById('filterSchool').addEventListener('click', () => {
-    const schoolEvents = events.filter(event => event.eventType === 'school');
-    renderEventList(schoolEvents);
+    const learningEvents = events.filter(event => event.eventType === 'school');
+    renderEventList(learningEvents);
 });
 
 window.removeEvent = removeEvent;

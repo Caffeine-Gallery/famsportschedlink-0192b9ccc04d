@@ -3,31 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>70's Disco Family Calendar</title>
+    <title>Minecraft Family Calendar</title>
     <link rel="stylesheet" href="index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="disco-ball"></div>
     <div id="app">
-        <h1>Groovy Family Calendar</h1>
+        <h1>Minecraft Family Calendar</h1>
         <div id="calendar"></div>
         <form id="eventForm">
-            <h2>Add Far Out Event</h2>
+            <h2>Craft New Event</h2>
             <input type="date" id="eventDate" required>
-            <input type="text" id="eventTitle" placeholder="Event Title" required>
+            <input type="text" id="eventTitle" placeholder="Event Name" required>
             <select id="eventType" required>
-                <option value="sports">Sports</option>
-                <option value="school">School</option>
+                <option value="sports">Adventure</option>
+                <option value="school">Learning</option>
             </select>
-            <textarea id="eventDescription" placeholder="Event Description" required></textarea>
-            <button type="submit">Add Groovy Event</button>
+            <textarea id="eventDescription" placeholder="Event Details" required></textarea>
+            <button type="submit">Craft Event</button>
         </form>
         <div>
-            <h2>Filter Events</h2>
-            <button id="filterAll">All</button>
-            <button id="filterSports">Sports</button>
-            <button id="filterSchool">School</button>
+            <h2>Mine Events</h2>
+            <button id="filterAll">All Ores</button>
+            <button id="filterSports">Adventure Ores</button>
+            <button id="filterSchool">Learning Ores</button>
         </div>
         <div id="eventList"></div>
     </div>
