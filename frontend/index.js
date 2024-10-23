@@ -11,7 +11,6 @@ async function loadEvents() {
 function renderCalendar() {
     const calendar = document.getElementById('calendar');
     calendar.innerHTML = '';
-    // Simple calendar implementation (can be expanded)
     const today = new Date();
     const month = today.getMonth();
     const year = today.getFullYear();
